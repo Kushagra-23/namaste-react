@@ -1,17 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const heading = React.createElement("h1", {
-  id: 'heading',
-  xyz: 'XYZ'
-}, "Hello World from React");
-// console.log(heading)
+const jsxHeading = (
+  <h1 className="head" tabIndex="5">
+    Namaste React
+  </h1>
+)
 
-const parent = React.createElement("div", 
-{
-  id: 'parent'
-}, [React.createElement("h1",{id: 'child'},"H1 TAG"), React.createElement("h2",{},"H2 TAG")]);
-console.log(parent)
+console.log(jsxHeading)
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(parent);
+
+root.render(jsxHeading);
